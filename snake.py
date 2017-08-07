@@ -8,21 +8,20 @@ turtle.setup(SIZE_X, SIZE_Y) #Curious? It's the turtle window
 #size.
 turtle.penup()
 SQUARE_SIZE = 20
-START_LENGTH = 6
+START_LENGTH = 1
 #Initialize lists
 pos_list = []
 stamp_list = []
 food_pos = []
 food_stamps = []
 #Set up positions (x,y) of boxes that make up the snake
+turtle.register_shape("clinton.gif")
 snake = turtle.clone()
-snake.shape("circle")
-snake.color('purple')
+snake.shape("clinton.gif")
+
 #Hide the turtle object (it's an arrow - we don't need to see it)
 turtle.hideturtle()
-turtle.register_shape('trash.gif')
-food=turtle.clone()
-food.shape('trash.gif')
+
 
 
 
@@ -37,10 +36,10 @@ for i in range(START_LENGTH):
     stamp_list.append(new_stamp)
     
 
-UP_ARROW='Up'
-LEFT_ARROW='Left'
-DOWN_ARROW='Down'
-RIGHT_ARROW='Right'
+W_KEY='Up'
+A_KEY='Left'
+S_KEY='Down'
+D_KEY='Right'
 TIME_STEP=100
 SPACEBAR='space'
 UP=0
@@ -75,10 +74,10 @@ def right():
     print('you pressed the right key!')
     
 
-turtle.onkeypress(up,UP_ARROW)
-turtle.onkeypress(left,LEFT_ARROW)
-turtle.onkeypress(down,DOWN_ARROW)
-turtle.onkeypress(right,RIGHT_ARROW)
+turtle.onkeypress(up,W_KEY)
+turtle.onkeypress(left,A_KEY)
+turtle.onkeypress(down,S_KEY)
+turtle.onkeypress(right,D_KEY)
 turtle.listen()
 
 score=turtle.clone()
