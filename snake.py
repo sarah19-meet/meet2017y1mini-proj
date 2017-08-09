@@ -15,9 +15,9 @@ stamp_list = []
 food_pos = []
 food_stamps = []
 #Set up positions (x,y) of boxes that make up the snake
-turtle.register_shape("clinton.gif")
+turtle.register_shape("square")
 snake = turtle.clone()
-snake.shape("clinton.gif")
+snake.shape("circle")
 
 #Hide the turtle object (it's an arrow - we don't need to see it)
 turtle.hideturtle()
